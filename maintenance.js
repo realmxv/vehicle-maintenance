@@ -34,13 +34,13 @@
   if (typeof document === 'undefined') return;
   const root = document.getElementById('maintenance');
   if (!root) return;
-  const catalog = window.VolknerMaintenanceCatalog;
+  const catalog = window.VehicleMaintenanceCatalog;
   function el(tag, text, parent, cls) {
     const e = document.createElement(tag); if (text) e.textContent = text;
     if (cls) e.className = cls; if (parent) parent.appendChild(e); return e;
   }
   root.className = 'maintenance-shell';
-  el('small','VOLKNER UX · WARTUNG UND SERVICE',root);
+  el('small','FAHRZEUG UX · WARTUNG UND SERVICE',root);
   el('h1','Alles im Blick. Auch die Wartung.',root);
   el('p','Katalogvorschau · Noch kein Fahrzeug zugeordnet. Wartungsnachweise und Gerätebestand sind nicht angebunden.',root,'maintenance-notice');
   if (!catalog || !Array.isArray(catalog.items)) {el('p','Wartungskatalog nicht verfügbar. Kein Wartungsstatus bestimmbar.',root); return;}
@@ -54,7 +54,7 @@
     list.replaceChildren();
     catalog.items.filter(i=>!select.value || i.category===select.value).forEach(item=>{
       const card=el('article',null,list,'maintenance-card');
-      el('span',item.status==='pending'?'Intervall offen':item.status==='policy_approved'?'Volkner-Vorgabe · Fahrzeugzuordnung offen':'Quelle geprüft · Fahrzeugzuordnung offen',card,'maintenance-badge');
+      el('span',item.status==='pending'?'Intervall offen':item.status==='policy_approved'?'Servicevorgabe · Fahrzeugzuordnung offen':'Quelle geprüft · Fahrzeugzuordnung offen',card,'maintenance-badge');
       el('h2',item.title,card); el('p',item.equipment,card);
       el('strong',intervalText(item.interval),card); el('p',item.trigger,card);
       if (item.updatedAt) el('p','Eintrag aktualisiert: '+item.updatedAt,card,'maintenance-source');

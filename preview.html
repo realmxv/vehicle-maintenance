@@ -1,4 +1,4 @@
-<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Volkner Wartung – Entwicklung</title><style>body{margin:0;background:#101820;font:16px system-ui}*{box-sizing:border-box}
+<!doctype html><html lang="de"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Service Wartung – Entwicklung</title><style>body{margin:0;background:#101820;font:16px system-ui}*{box-sizing:border-box}
 .maintenance-shell {max-width:1200px;margin:auto;padding:20px;color:#eef2f7}
 .maintenance-shell h1 {font-size:32px;margin:12px 0}
 .maintenance-notice {border-left:4px solid #eab65b;padding:14px;background:#252a34}
@@ -8,4 +8,4 @@
 .maintenance-card h2 {font-size:20px;line-height:1.4}.maintenance-card p{line-height:1.6}
 .maintenance-badge{font-size:12px;color:#efc477}.maintenance-source{font-size:12px;color:#b8c7d4}
 .maintenance-card label{display:block;margin-top:20px}.maintenance-card input{display:block;width:100%}
-</style><main id="maintenance"></main><script>fetch("./catalog.json").then(r=>{if(!r.ok)throw Error("Katalog nicht verfügbar");return r.json()}).then(c=>{window.VolknerMaintenanceCatalog=c;const s=document.createElement("script");s.src="./maintenance.js";document.body.appendChild(s)}).catch(()=>document.getElementById("maintenance").textContent="Katalog nicht verfügbar. Bitte über einen lokalen Webserver öffnen; Fälligkeit unbekannt.");</script></html>
+</style><main id="maintenance"></main><script>fetch("./catalog.json").then(r=>{if(!r.ok)throw Error("Katalog nicht verfügbar");return r.json()}).then(c=>{window.VehicleMaintenanceCatalog=c;const s=document.createElement("script");s.src="./maintenance.js";document.body.appendChild(s)}).catch(()=>document.getElementById("maintenance").textContent="Katalog nicht verfügbar. Bitte über einen lokalen Webserver öffnen; Fälligkeit unbekannt.");</script></html>

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Volkner Wartungskatalog",
+  "title": "Service Wartungskatalog",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -316,7 +316,7 @@
                 "enum": [
                   "user",
                   "controller",
-                  "volkner_service_online"
+                  "service_online"
                 ]
               }
             },
@@ -364,7 +364,7 @@
                 "properties": {
                   "allowedBy": {
                     "contains": {
-                      "const": "volkner_service_online"
+                      "const": "service_online"
                     }
                   }
                 }
@@ -388,7 +388,7 @@
         "policyBasis": {
           "enum": [
             "manufacturer",
-            "volkner"
+            "service_policy"
           ]
         },
         "intervalStart": {
@@ -442,7 +442,7 @@
           "if": {
             "properties": {
               "id": {
-                "const": "webasto-ttp50-betrieb"
+                "const": "heizungssystem-betrieb"
               }
             }
           },
@@ -454,7 +454,7 @@
             ],
             "properties": {
               "equipmentId": {
-                "const": "webasto-thermo-top-pro-50-lin"
+                "const": "heizungssystem"
               },
               "type": {
                 "const": "information"
@@ -480,7 +480,7 @@
           "if": {
             "properties": {
               "id": {
-                "const": "webasto-ttp50-kontrolle"
+                "const": "heizungssystem-kontrolle"
               }
             }
           },
@@ -492,7 +492,7 @@
             ],
             "properties": {
               "equipmentId": {
-                "const": "webasto-thermo-top-pro-50-lin"
+                "const": "heizungssystem"
               },
               "type": {
                 "const": "service"
@@ -500,7 +500,7 @@
               "reset": {
                 "const": {
                   "allowedBy": [
-                    "volkner_service_online"
+                    "service_online"
                   ],
                   "restartIntervalFrom": "performedAt",
                   "requiresServiceRecord": true
@@ -518,7 +518,7 @@
           "if": {
             "properties": {
               "id": {
-                "const": "webasto-ttp50-abgasanlage"
+                "const": "heizungssystem-abgasanlage"
               }
             }
           },
@@ -534,7 +534,7 @@
                 "const": "service"
               },
               "policyBasis": {
-                "const": "volkner"
+                "const": "service_policy"
               },
               "intervalStart": {
                 "const": "commissionedAt"
@@ -547,7 +547,7 @@
               "reset": {
                 "const": {
                   "allowedBy": [
-                    "volkner_service_online"
+                    "service_online"
                   ],
                   "restartIntervalFrom": "performedAt",
                   "requiresServiceRecord": true
@@ -560,7 +560,7 @@
           "if": {
             "properties": {
               "id": {
-                "const": "webasto-ttp50-komplettwechsel"
+                "const": "heizungssystem-komplettwechsel"
               }
             }
           },
@@ -576,7 +576,7 @@
                 "const": "replacement"
               },
               "policyBasis": {
-                "const": "volkner"
+                "const": "service_policy"
               },
               "intervalStart": {
                 "const": "systemInstalledAt"
@@ -589,7 +589,7 @@
               "reset": {
                 "const": {
                   "allowedBy": [
-                    "volkner_service_online"
+                    "service_online"
                   ],
                   "restartIntervalFrom": "performedAt",
                   "requiresServiceRecord": true,
@@ -603,7 +603,7 @@
           "if": {
             "properties": {
               "id": {
-                "const": "webasto-ttp50-wasserpumpe"
+                "const": "heizungssystem-wasserpumpe"
               }
             }
           },
@@ -619,7 +619,7 @@
                 "const": "replacement"
               },
               "policyBasis": {
-                "const": "volkner"
+                "const": "service_policy"
               },
               "intervalStart": {
                 "const": "componentInstalledAt"
@@ -632,7 +632,7 @@
               "reset": {
                 "const": {
                   "allowedBy": [
-                    "volkner_service_online"
+                    "service_online"
                   ],
                   "restartIntervalFrom": "performedAt",
                   "requiresServiceRecord": true,
@@ -646,7 +646,7 @@
           "if": {
             "properties": {
               "id": {
-                "const": "webasto-ttp50-dieselpumpe"
+                "const": "heizungssystem-dieselpumpe"
               }
             }
           },
@@ -662,7 +662,7 @@
                 "const": "replacement"
               },
               "policyBasis": {
-                "const": "volkner"
+                "const": "service_policy"
               },
               "intervalStart": {
                 "const": "componentInstalledAt"
@@ -675,7 +675,99 @@
               "reset": {
                 "const": {
                   "allowedBy": [
-                    "volkner_service_online"
+                    "service_online"
+                  ],
+                  "restartIntervalFrom": "performedAt",
+                  "requiresServiceRecord": true,
+                  "requiresReplacementRecord": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "wasserpumpe-kontrolle"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "equipmentId",
+              "type",
+              "policyBasis",
+              "intervalStart",
+              "reset"
+            ],
+            "properties": {
+              "equipmentId": {
+                "const": "wasserpumpe"
+              },
+              "type": {
+                "const": "service"
+              },
+              "policyBasis": {
+                "const": "service_policy"
+              },
+              "intervalStart": {
+                "const": "componentInstalledAt"
+              },
+              "interval": {
+                "const": {
+                  "months": 24
+                }
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "user"
+                  ],
+                  "restartIntervalFrom": "performedAt"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "wasserpumpe-austausch"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "equipmentId",
+              "type",
+              "policyBasis",
+              "intervalStart",
+              "reset"
+            ],
+            "properties": {
+              "equipmentId": {
+                "const": "wasserpumpe"
+              },
+              "type": {
+                "const": "replacement"
+              },
+              "policyBasis": {
+                "const": "service_policy"
+              },
+              "intervalStart": {
+                "const": "componentInstalledAt"
+              },
+              "interval": {
+                "const": {
+                  "months": 180
+                }
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "service_online"
                   ],
                   "restartIntervalFrom": "performedAt",
                   "requiresServiceRecord": true,

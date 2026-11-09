@@ -1,13 +1,13 @@
 {
   "id": "aufbau-neue-wartung",
   "category": "aufbau",
-  "equipment": "Hersteller und Typ ergänzen",
+  "equipment": "Neutrale Gerätebezeichnung",
   "title": "Neue Wartungsaufgabe",
   "interval": null,
   "trigger": "Intervall noch nicht freigegeben",
   "source": null,
   "status": "pending",
-  "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+  "note": "Geräteausführung und Quellen ausschließlich intern zuordnen.",
   "updatedAt": "2026-11-09",
   "instructions": {
     "summary": "Tätigkeit beschreiben",

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.4.2",
+  "version": "0.5.0",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -39,34 +39,26 @@
   ],
   "items": [
     {
-      "id": "webasto-ttp50-betrieb",
+      "id": "heizungssystem-betrieb",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "equipment": "Heizungssystem",
       "title": "Heizgerät in Betrieb nehmen",
       "interval": {
         "days": 28
       },
       "trigger": "Alle 4 Wochen",
-      "source": "Webasto 9045439A, 03/2025, Seite 7, Kapitel 11",
+      "source": "Intern geprüfte Betriebsanweisung; öffentliche Quellenkennung H-01.",
       "status": "source_checked",
-      "note": "Keine feste Laufdauer in dieser Wartungsstelle. Nur für Thermo Top Pro 50; nicht auf Webasto 9 kW oder andere Heizungen übertragen.",
+      "note": "Keine feste Laufdauer in der geprüften Wartungsstelle. Nur für intern zugeordnete Geräteausführung freigegeben; keine pauschale Übertragung auf andere Heizungen.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Keine feste Laufdauer in dieser Wartungsstelle. Nur für Thermo Top Pro 50; nicht auf Webasto 9 kW oder andere Heizungen übertragen.",
+        "summary": "Keine feste Laufdauer in der geprüften Wartungsstelle. Nur für intern zugeordnete Geräteausführung freigegeben; keine pauschale Übertragung auf andere Heizungen.",
         "steps": [],
         "warnings": []
       },
       "images": [],
-      "documents": [
-        {
-          "title": "Bedienungsanweisung Thermo Top Pro 50",
-          "documentNumber": "9045439A",
-          "issueDate": "2025-03",
-          "page": 7,
-          "url": null
-        }
-      ],
-      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "documents": [],
+      "equipmentId": "heizungssystem",
       "type": "information",
       "reset": {
         "allowedBy": [
@@ -77,15 +69,15 @@
       }
     },
     {
-      "id": "webasto-ttp50-kontrolle",
+      "id": "heizungssystem-kontrolle",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "equipment": "Heizungssystem",
       "title": "Fachmännische Wartung fällig",
       "interval": {
         "months": 84
       },
       "trigger": "Alle 7 Jahre",
-      "source": "Volkner-Vorgabe, von Max am 09.11.2026 auf alle 7 Jahre geändert. Abweichung: Webasto 9045956A, Kapitel 9.7, nennt Kontrollarbeiten mindestens alle 2 Jahre.",
+      "source": "Eigene Servicevorgabe vom 09.11.2026: alle 7 Jahre. Abweichend nennt die intern geprüfte Herstellerunterlage Kontrollarbeiten mindestens alle 2 Jahre; keine Herstellerfreigabe zur Verlängerung.",
       "status": "policy_approved",
       "note": "Fehlerspeicher, elektrische Anschlüsse und Leitungen, Kraftstoffleitung, Schläuche sowie Heizungsfunktion prüfen.",
       "updatedAt": "2026-11-09",
@@ -95,25 +87,17 @@
         "warnings": []
       },
       "images": [],
-      "documents": [
-        {
-          "title": "Werkstatthandbuch Thermo Top Pro 50",
-          "documentNumber": "9045956A",
-          "issueDate": "2025-05",
-          "page": 21,
-          "url": null
-        }
-      ],
-      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "documents": [],
+      "equipmentId": "heizungssystem",
       "type": "service",
       "reset": {
         "allowedBy": [
-          "volkner_service_online"
+          "service_online"
         ],
         "restartIntervalFrom": "performedAt",
         "requiresServiceRecord": true
       },
-      "policyBasis": "volkner"
+      "policyBasis": "service_policy"
     },
     {
       "id": "heizung-klaerung",
@@ -124,10 +108,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -143,10 +127,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -162,10 +146,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -181,10 +165,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -200,10 +184,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -219,10 +203,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -238,10 +222,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -257,10 +241,10 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "note": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "summary": "Geräteausführung und Quellen intern zuordnen; öffentlich nur neutrale Bezeichnungen und freigegebene Serviceinhalte verwenden.",
         "steps": [],
         "warnings": []
       },
@@ -268,15 +252,15 @@
       "documents": []
     },
     {
-      "id": "webasto-ttp50-abgasanlage",
+      "id": "heizungssystem-abgasanlage",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "equipment": "Heizungssystem",
       "title": "Abgasanlage inklusive Schalldämpfer prüfen",
       "interval": {
         "months": 24
       },
       "trigger": "Alle 2 Jahre",
-      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "source": "Verbindliche Servicevorgabe, festgelegt am 09.11.2026; keine Hersteller-Austauschfrist.",
       "status": "policy_approved",
       "note": "Abgasrohre, Schalldämpfer, Verbindungen und Befestigungen auf Zustand, Schäden, Korrosion, Dichtheit und freien Durchgang prüfen; Kondensatableitung kontrollieren. Austausch nach Zustand.",
       "updatedAt": "2026-11-09",
@@ -287,28 +271,28 @@
       },
       "images": [],
       "documents": [],
-      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "equipmentId": "heizungssystem",
       "type": "service",
       "reset": {
         "allowedBy": [
-          "volkner_service_online"
+          "service_online"
         ],
         "restartIntervalFrom": "performedAt",
         "requiresServiceRecord": true
       },
-      "policyBasis": "volkner",
+      "policyBasis": "service_policy",
       "intervalStart": "commissionedAt"
     },
     {
-      "id": "webasto-ttp50-komplettwechsel",
+      "id": "heizungssystem-komplettwechsel",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "equipment": "Heizungssystem",
       "title": "Heizung und komplette Abgasanlage austauschen",
       "interval": {
         "months": 180
       },
       "trigger": "Alle 15 Jahre",
-      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "source": "Verbindliche Servicevorgabe, festgelegt am 09.11.2026; keine Hersteller-Austauschfrist.",
       "status": "policy_approved",
       "note": "Heizgerät und komplette Abgasanlage einschließlich Abgasrohren und Schalldämpfer spätestens nach 15 Jahren vollständig ersetzen.",
       "updatedAt": "2026-11-09",
@@ -319,84 +303,155 @@
       },
       "images": [],
       "documents": [],
-      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "equipmentId": "heizungssystem",
       "type": "replacement",
       "reset": {
         "allowedBy": [
-          "volkner_service_online"
+          "service_online"
         ],
         "restartIntervalFrom": "performedAt",
         "requiresServiceRecord": true,
         "requiresReplacementRecord": true
       },
-      "policyBasis": "volkner",
+      "policyBasis": "service_policy",
       "intervalStart": "systemInstalledAt"
     },
     {
-      "id": "webasto-ttp50-wasserpumpe",
+      "id": "heizungssystem-wasserpumpe",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
-      "title": "Webasto-Heizung: Wasserpumpe austauschen",
+      "equipment": "Heizungssystem",
+      "title": "Heizungssystem: Wasserpumpe austauschen",
       "interval": {
         "months": 84
       },
       "trigger": "Alle 7 Jahre",
-      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "source": "Verbindliche Servicevorgabe, festgelegt am 09.11.2026; keine Hersteller-Austauschfrist.",
       "status": "policy_approved",
-      "note": "Kühlmittel-Umwälzpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+      "note": "Kühlmittel-Umwälzpumpe des Heizungssystems spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Kühlmittel-Umwälzpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+        "summary": "Kühlmittel-Umwälzpumpe des Heizungssystems spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
         "steps": [],
         "warnings": []
       },
       "images": [],
       "documents": [],
-      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "equipmentId": "heizungssystem",
       "type": "replacement",
       "reset": {
         "allowedBy": [
-          "volkner_service_online"
+          "service_online"
         ],
         "restartIntervalFrom": "performedAt",
         "requiresServiceRecord": true,
         "requiresReplacementRecord": true
       },
-      "policyBasis": "volkner",
+      "policyBasis": "service_policy",
       "intervalStart": "componentInstalledAt"
     },
     {
-      "id": "webasto-ttp50-dieselpumpe",
+      "id": "heizungssystem-dieselpumpe",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
-      "title": "Webasto-Heizung: Dieselpumpe austauschen",
+      "equipment": "Heizungssystem",
+      "title": "Heizungssystem: Dieselpumpe austauschen",
       "interval": {
         "months": 84
       },
       "trigger": "Alle 7 Jahre",
-      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "source": "Verbindliche Servicevorgabe, festgelegt am 09.11.2026; keine Hersteller-Austauschfrist.",
       "status": "policy_approved",
-      "note": "Kraftstoff-Dosierpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+      "note": "Kraftstoff-Dosierpumpe des Heizungssystems spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Kraftstoff-Dosierpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+        "summary": "Kraftstoff-Dosierpumpe des Heizungssystems spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
         "steps": [],
         "warnings": []
       },
       "images": [],
       "documents": [],
-      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "equipmentId": "heizungssystem",
       "type": "replacement",
       "reset": {
         "allowedBy": [
-          "volkner_service_online"
+          "service_online"
         ],
         "restartIntervalFrom": "performedAt",
         "requiresServiceRecord": true,
         "requiresReplacementRecord": true
       },
-      "policyBasis": "volkner",
+      "policyBasis": "service_policy",
       "intervalStart": "componentInstalledAt"
+    },
+    {
+      "id": "wasserpumpe-kontrolle",
+      "category": "wasser",
+      "equipment": "Wasserpumpe",
+      "equipmentId": "wasserpumpe",
+      "title": "Wasserpumpe: Vordruck und Dichtheit prüfen",
+      "interval": {
+        "months": 24
+      },
+      "trigger": "Alle 2 Jahre",
+      "source": "Eigene Servicevorgabe vom 09.11.2026: alle 2 Jahre. Die intern geprüfte Herstelleranleitung nennt für die Vordruckprüfung jährlich; keine Herstellerfreigabe zur Verlängerung.",
+      "status": "policy_approved",
+      "note": "Vordruck im integrierten Druckbehälter bei druckloser Wasserseite prüfen und gegebenenfalls auf 70 % des eingestellten Pumpendrucks einstellen. Sichtkontrolle der Pumpe auf Schäden und Undichtigkeiten durchführen.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Vordruck im integrierten Druckbehälter bei druckloser Wasserseite prüfen und gegebenenfalls auf 70 % des eingestellten Pumpendrucks einstellen. Sichtkontrolle der Pumpe auf Schäden und Undichtigkeiten durchführen.",
+        "steps": [
+          "Pumpe gemäß interner Geräteanleitung sicher außer Betrieb nehmen und Wasserseite drucklos machen.",
+          "Vordruck messen und bei Bedarf auf 70 % des eingestellten Pumpendrucks einstellen.",
+          "Pumpe und Anschlüsse auf sichtbare Schäden und Undichtigkeiten prüfen; nach Wiederinbetriebnahme Dichtheit kontrollieren.",
+          "Tatsächlich durchgeführte Wartung mit Durchführungsdatum bestätigen."
+        ],
+        "warnings": [
+          "Die gerätespezifische Anleitung und Sicherheitsmaßnahmen beachten. Schäden oder Undichtigkeiten fachgerecht beheben lassen."
+        ]
+      },
+      "images": [],
+      "documents": [],
+      "type": "service",
+      "policyBasis": "service_policy",
+      "intervalStart": "componentInstalledAt",
+      "reset": {
+        "allowedBy": [
+          "user"
+        ],
+        "restartIntervalFrom": "performedAt"
+      }
+    },
+    {
+      "id": "wasserpumpe-austausch",
+      "category": "wasser",
+      "equipment": "Wasserpumpe",
+      "equipmentId": "wasserpumpe",
+      "title": "Wasserpumpe austauschen",
+      "interval": {
+        "months": 180
+      },
+      "trigger": "Alle 15 Jahre",
+      "source": "Eigene Servicevorgabe vom 09.11.2026; keine feste Hersteller-Austauschfrist in den geprüften Unterlagen gefunden.",
+      "status": "policy_approved",
+      "note": "Wasserpumpe 15 Jahre nach Einbau beziehungsweise letztem Austausch vollständig ersetzen.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Wasserpumpe 15 Jahre nach Einbau beziehungsweise letztem Austausch vollständig ersetzen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [],
+      "type": "replacement",
+      "policyBasis": "service_policy",
+      "intervalStart": "componentInstalledAt",
+      "reset": {
+        "allowedBy": [
+          "service_online"
+        ],
+        "restartIntervalFrom": "performedAt",
+        "requiresServiceRecord": true,
+        "requiresReplacementRecord": true
+      }
     }
   ]
 }
