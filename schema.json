@@ -184,7 +184,8 @@
         "status": {
           "enum": [
             "pending",
-            "source_checked"
+            "source_checked",
+            "policy_approved"
           ]
         },
         "note": {
@@ -295,7 +296,8 @@
         "type": {
           "enum": [
             "information",
-            "service"
+            "service",
+            "replacement"
           ]
         },
         "reset": {
@@ -329,6 +331,9 @@
               ]
             },
             "requiresServiceRecord": {
+              "type": "boolean"
+            },
+            "requiresReplacementRecord": {
               "type": "boolean"
             }
           },
@@ -378,6 +383,19 @@
                 }
               }
             }
+          ]
+        },
+        "policyBasis": {
+          "enum": [
+            "manufacturer",
+            "volkner"
+          ]
+        },
+        "intervalStart": {
+          "enum": [
+            "commissionedAt",
+            "componentInstalledAt",
+            "systemInstalledAt"
           ]
         }
       },
@@ -491,6 +509,177 @@
               "interval": {
                 "const": {
                   "months": 24
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "webasto-ttp50-abgasanlage"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "type",
+              "policyBasis",
+              "intervalStart",
+              "reset"
+            ],
+            "properties": {
+              "type": {
+                "const": "service"
+              },
+              "policyBasis": {
+                "const": "volkner"
+              },
+              "intervalStart": {
+                "const": "commissionedAt"
+              },
+              "interval": {
+                "const": {
+                  "months": 24
+                }
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "volkner_service_online"
+                  ],
+                  "restartIntervalFrom": "performedAt",
+                  "requiresServiceRecord": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "webasto-ttp50-komplettwechsel"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "type",
+              "policyBasis",
+              "intervalStart",
+              "reset"
+            ],
+            "properties": {
+              "type": {
+                "const": "replacement"
+              },
+              "policyBasis": {
+                "const": "volkner"
+              },
+              "intervalStart": {
+                "const": "systemInstalledAt"
+              },
+              "interval": {
+                "const": {
+                  "months": 180
+                }
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "volkner_service_online"
+                  ],
+                  "restartIntervalFrom": "performedAt",
+                  "requiresServiceRecord": true,
+                  "requiresReplacementRecord": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "webasto-ttp50-wasserpumpe"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "type",
+              "policyBasis",
+              "intervalStart",
+              "reset"
+            ],
+            "properties": {
+              "type": {
+                "const": "replacement"
+              },
+              "policyBasis": {
+                "const": "volkner"
+              },
+              "intervalStart": {
+                "const": "componentInstalledAt"
+              },
+              "interval": {
+                "const": {
+                  "months": 84
+                }
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "volkner_service_online"
+                  ],
+                  "restartIntervalFrom": "performedAt",
+                  "requiresServiceRecord": true,
+                  "requiresReplacementRecord": true
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "webasto-ttp50-dieselpumpe"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "type",
+              "policyBasis",
+              "intervalStart",
+              "reset"
+            ],
+            "properties": {
+              "type": {
+                "const": "replacement"
+              },
+              "policyBasis": {
+                "const": "volkner"
+              },
+              "intervalStart": {
+                "const": "componentInstalledAt"
+              },
+              "interval": {
+                "const": {
+                  "months": 84
+                }
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "volkner_service_online"
+                  ],
+                  "restartIntervalFrom": "performedAt",
+                  "requiresServiceRecord": true,
+                  "requiresReplacementRecord": true
                 }
               }
             }

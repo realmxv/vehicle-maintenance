@@ -54,7 +54,7 @@
     list.replaceChildren();
     catalog.items.filter(i=>!select.value || i.category===select.value).forEach(item=>{
       const card=el('article',null,list,'maintenance-card');
-      el('span',item.status==='pending'?'Intervall offen':'Quelle geprüft · Fahrzeugzuordnung offen',card,'maintenance-badge');
+      el('span',item.status==='pending'?'Intervall offen':item.status==='policy_approved'?'Volkner-Vorgabe · Fahrzeugzuordnung offen':'Quelle geprüft · Fahrzeugzuordnung offen',card,'maintenance-badge');
       el('h2',item.title,card); el('p',item.equipment,card);
       el('strong',intervalText(item.interval),card); el('p',item.trigger,card);
       if (item.updatedAt) el('p','Eintrag aktualisiert: '+item.updatedAt,card,'maintenance-source');
@@ -77,7 +77,7 @@
       });
       if(item.source) el('p','Quelle: '+item.source,card,'maintenance-source');
       if(item.interval && (item.interval.days || item.interval.months)) {
-        const label=el('label','Vorschau: Datum der letzten Durchführung ',card);
+        const label=el('label',item.type==='replacement'?'Vorschau: Einbau bzw. letzter vollständiger Austausch ':'Vorschau: Datum der letzten Durchführung ',card);
         const input=el('input',null,label); input.type='date';
         input.setAttribute('aria-label','Letzte Durchführung: '+item.title);
         const today=new Intl.DateTimeFormat('sv-SE',{timeZone:'Europe/Berlin'}).format(new Date());

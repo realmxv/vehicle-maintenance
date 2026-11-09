@@ -66,3 +66,11 @@ Bilder unter `assets/images/`, Anleitungen unter `assets/documents/` ablegen, an
 ## Rücksetzberechtigungen
 
 Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Webasto 28-Tage-Information: ausschließlich Steuerung nach bestätigtem Normalbetrieb. Zweijahreswartung: ausschließlich Volkner-Service online mit Nachweis. Details und Implementierungsgrenzen: [Rücksetzregeln](reset-policy.md).
+
+## Verbindliche Volkner-Vorgaben vom 09.11.2026
+
+- Abgasanlage einschließlich Schalldämpfer alle 24 Monate prüfen; Austausch nach Zustand.
+- Heizgerät und komplette Abgasanlage einschließlich Schalldämpfer spätestens nach 180 Monaten ersetzen.
+- Kühlmittel-Umwälzpumpe und Kraftstoff-Dosierpumpe jeweils spätestens nach 84 Monaten ersetzen.
+
+Diese Fristen sind Volkner-Vorgaben, keine behaupteten Webasto-Hersteller-Austauschfristen. Alle vier Punkte dürfen nur durch Volkner-Service online mit Nachweis bestätigt werden. Austauschpunkte benötigen zusätzlich einen Austauschnachweis. Erste Frist ab Einbau/Inbetriebnahme, danach ab tatsächlicher Durchführung der jeweiligen Tätigkeit. Eine Prüfung setzt keine Austauschfrist zurück; Pumpentausch setzt keine Frist der übrigen Bauteile zurück. Ein Komplettwechsel darf Pumpenfristen nur dann neu starten, wenn auch die betreffenden Pumpen tatsächlich mit ersetzt und dokumentiert wurden. Fehlendes Einbaudatum bedeutet Klärungsbedarf, niemals Start der Frist am heutigen Tag. Die Abgasprüfung ersetzt keine noch offene Freigabe der zusätzlichen Aluminium-Abgasleitung. Defekte können einen früheren Austausch erfordern.

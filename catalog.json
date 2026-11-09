@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -294,6 +294,137 @@
       },
       "images": [],
       "documents": []
+    },
+    {
+      "id": "webasto-ttp50-abgasanlage",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "title": "Abgasanlage inklusive Schalldämpfer prüfen",
+      "interval": {
+        "months": 24
+      },
+      "trigger": "Alle 2 Jahre",
+      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "status": "policy_approved",
+      "note": "Abgasrohre, Schalldämpfer, Verbindungen und Befestigungen auf Zustand, Schäden, Korrosion, Dichtheit und freien Durchgang prüfen; Kondensatableitung kontrollieren. Austausch nach Zustand.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Abgasrohre, Schalldämpfer, Verbindungen und Befestigungen auf Zustand, Schäden, Korrosion, Dichtheit und freien Durchgang prüfen; Kondensatableitung kontrollieren. Austausch nach Zustand.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [],
+      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "type": "service",
+      "reset": {
+        "allowedBy": [
+          "volkner_service_online"
+        ],
+        "restartIntervalFrom": "performedAt",
+        "requiresServiceRecord": true
+      },
+      "policyBasis": "volkner",
+      "intervalStart": "commissionedAt"
+    },
+    {
+      "id": "webasto-ttp50-komplettwechsel",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "title": "Heizung und komplette Abgasanlage austauschen",
+      "interval": {
+        "months": 180
+      },
+      "trigger": "Alle 15 Jahre",
+      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "status": "policy_approved",
+      "note": "Heizgerät und komplette Abgasanlage einschließlich Abgasrohren und Schalldämpfer spätestens nach 15 Jahren vollständig ersetzen.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Heizgerät und komplette Abgasanlage einschließlich Abgasrohren und Schalldämpfer spätestens nach 15 Jahren vollständig ersetzen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [],
+      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "type": "replacement",
+      "reset": {
+        "allowedBy": [
+          "volkner_service_online"
+        ],
+        "restartIntervalFrom": "performedAt",
+        "requiresServiceRecord": true,
+        "requiresReplacementRecord": true
+      },
+      "policyBasis": "volkner",
+      "intervalStart": "systemInstalledAt"
+    },
+    {
+      "id": "webasto-ttp50-wasserpumpe",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "title": "Webasto-Heizung: Wasserpumpe austauschen",
+      "interval": {
+        "months": 84
+      },
+      "trigger": "Alle 7 Jahre",
+      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "status": "policy_approved",
+      "note": "Kühlmittel-Umwälzpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Kühlmittel-Umwälzpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [],
+      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "type": "replacement",
+      "reset": {
+        "allowedBy": [
+          "volkner_service_online"
+        ],
+        "restartIntervalFrom": "performedAt",
+        "requiresServiceRecord": true,
+        "requiresReplacementRecord": true
+      },
+      "policyBasis": "volkner",
+      "intervalStart": "componentInstalledAt"
+    },
+    {
+      "id": "webasto-ttp50-dieselpumpe",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
+      "title": "Webasto-Heizung: Dieselpumpe austauschen",
+      "interval": {
+        "months": 84
+      },
+      "trigger": "Alle 7 Jahre",
+      "source": "Verbindliche Volkner-Vorgabe, von Max am 09.11.2026 festgelegt; keine Webasto-Hersteller-Austauschfrist.",
+      "status": "policy_approved",
+      "note": "Kraftstoff-Dosierpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Kraftstoff-Dosierpumpe der Webasto-Heizung spätestens sieben Jahre nach Einbau bzw. letztem Austausch ersetzen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [],
+      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "type": "replacement",
+      "reset": {
+        "allowedBy": [
+          "volkner_service_online"
+        ],
+        "restartIntervalFrom": "performedAt",
+        "requiresServiceRecord": true,
+        "requiresReplacementRecord": true
+      },
+      "policyBasis": "volkner",
+      "intervalStart": "componentInstalledAt"
     }
   ]
 }
