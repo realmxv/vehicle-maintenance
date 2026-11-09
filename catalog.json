@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "version": "0.1.0",
+  "updated": "2026-11-09",
+  "status": "development",
+  "categories": [
+    {
+      "id": "heizung",
+      "title": "Heizung und Warmwasser"
+    },
+    {
+      "id": "aufbau",
+      "title": "Aufbau und Dichtungen"
+    },
+    {
+      "id": "wasser",
+      "title": "Wasser und Sanitär"
+    },
+    {
+      "id": "elektrik",
+      "title": "Elektrik und Batterien"
+    },
+    {
+      "id": "klima",
+      "title": "Klima und Lüftung"
+    },
+    {
+      "id": "hydraulik",
+      "title": "Hydraulik, Stützen und Garage"
+    },
+    {
+      "id": "fahrgestell",
+      "title": "Fahrgestell und Fahrwerk"
+    },
+    {
+      "id": "ausstattung",
+      "title": "Weitere Ausstattung"
+    }
+  ],
+  "items": [
+    {
+      "id": "webasto-ttp50-betrieb",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50",
+      "title": "Heizgerät in Betrieb nehmen",
+      "interval": {
+        "days": 28
+      },
+      "trigger": "Alle 4 Wochen",
+      "source": "Webasto 9045439A, 03/2025, Seite 7, Kapitel 11",
+      "status": "source_checked",
+      "note": "Keine feste Laufdauer in dieser Wartungsstelle. Nur für Thermo Top Pro 50; nicht auf Webasto 9 kW oder andere Heizungen übertragen."
+    },
+    {
+      "id": "webasto-ttp50-saison",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50",
+      "title": "Fachmännische Prüfung zu Beginn der Heizperiode",
+      "interval": null,
+      "trigger": "Beginn der Heizperiode",
+      "source": "Webasto 9045439A, 03/2025, Seite 7, Kapitel 11",
+      "status": "source_checked",
+      "note": "Saisonbeginn wird vom Nutzer bzw. Service erfasst, kein festes Kalenderdatum."
+    },
+    {
+      "id": "webasto-ttp50-kontrolle",
+      "category": "heizung",
+      "equipment": "Webasto Thermo Top Pro 50",
+      "title": "Kontrollarbeiten durch Fachbetrieb",
+      "interval": {
+        "months": 24
+      },
+      "trigger": "Mindestens alle 2 Jahre",
+      "source": "Webasto 9045956A, 05/2025, Seite 21, Kapitel 9.7",
+      "status": "source_checked",
+      "note": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Saisonprüfung zusätzlich beachten; nur vollständig dokumentierter Umfang zählt."
+    },
+    {
+      "id": "heizung-klaerung",
+      "category": "heizung",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Heizung und Warmwasser: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "aufbau-klaerung",
+      "category": "aufbau",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Aufbau und Dichtungen: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "wasser-klaerung",
+      "category": "wasser",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Wasser und Sanitär: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "elektrik-klaerung",
+      "category": "elektrik",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Elektrik und Batterien: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "klima-klaerung",
+      "category": "klima",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Klima und Lüftung: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "hydraulik-klaerung",
+      "category": "hydraulik",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Hydraulik, Stützen und Garage: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "fahrgestell-klaerung",
+      "category": "fahrgestell",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Fahrgestell und Fahrwerk: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    },
+    {
+      "id": "ausstattung-klaerung",
+      "category": "ausstattung",
+      "equipment": "Geräteausführung noch zuzuordnen",
+      "title": "Weitere Ausstattung: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+    }
+  ]
+}

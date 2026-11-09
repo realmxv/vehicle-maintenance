@@ -1,0 +1,14 @@
+const assert=require('node:assert/strict');
+const {dueDate}=require('./maintenance.js');
+const c=require('./catalog.json');
+assert.equal(dueDate('2026-01-31',{days:28}),'2026-02-28');
+assert.equal(dueDate('2024-02-29',{months:24}),'2026-02-28');
+assert.equal(dueDate('2026-01-31',{months:1}),'2026-02-28');
+assert.equal(dueDate('2026-02-30',{days:28}),null);
+assert.equal(dueDate('',{days:28}),null);
+assert.equal(dueDate('2026-01-01',null),null);
+assert.equal(new Set(c.items.map(i=>i.id)).size,c.items.length);
+assert.equal(c.categories.length,8);
+assert(c.items.filter(i=>i.status==='pending').every(i=>i.interval===null));
+assert(c.items.filter(i=>i.status==='source_checked').every(i=>i.source));
+console.log('10 Wartungsprüfungen bestanden');
