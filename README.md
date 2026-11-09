@@ -65,7 +65,7 @@ Bilder unter `assets/images/`, Anleitungen unter `assets/documents/` ablegen, an
 
 ## Rücksetzberechtigungen
 
-Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Webasto 28-Tage-Information: ausschließlich Steuerung nach bestätigtem Normalbetrieb. Zweijahreswartung: ausschließlich Volkner-Service online mit Nachweis. Details und Implementierungsgrenzen: [Rücksetzregeln](reset-policy.md).
+Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Webasto 28-Tage-Information: ausschließlich Steuerung nach bestätigtem Normalbetrieb. Fachmännische Wartung alle 7 Jahre: ausschließlich Volkner-Service online mit Nachweis. Details und Implementierungsgrenzen: [Rücksetzregeln](reset-policy.md).
 
 ## Verbindliche Volkner-Vorgaben vom 09.11.2026
 
@@ -76,3 +76,5 @@ Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Webasto 28-Tage-Inform
 Diese Fristen sind Volkner-Vorgaben, keine behaupteten Webasto-Hersteller-Austauschfristen. Alle vier Punkte dürfen nur durch Volkner-Service online mit Nachweis bestätigt werden. Austauschpunkte benötigen zusätzlich einen Austauschnachweis. Erste Frist ab Einbau/Inbetriebnahme, danach ab tatsächlicher Durchführung der jeweiligen Tätigkeit. Eine Prüfung setzt keine Austauschfrist zurück; Pumpentausch setzt keine Frist der übrigen Bauteile zurück. Ein Komplettwechsel darf Pumpenfristen nur dann neu starten, wenn auch die betreffenden Pumpen tatsächlich mit ersetzt und dokumentiert wurden. Fehlendes Einbaudatum bedeutet Klärungsbedarf, niemals Start der Frist am heutigen Tag. Die Abgasprüfung ersetzt keine noch offene Freigabe der zusätzlichen Aluminium-Abgasleitung. Defekte können einen früheren Austausch erfordern.
 
 Version 0.4.1: Separater Saisonpunkt auf Nutzerwunsch aus dem Volkner-Katalog entfernt. Quellenunterlagen bleiben unverändert; der Katalog ersetzt nicht sämtliche Herstellerhinweise.
+
+Version 0.4.2: Fachmännische Wartung fällig – Fehlerspeicher, elektrische Anschlüsse und Leitungen, Kraftstoffleitung, Schläuche sowie Heizungsfunktion prüfen. Alle 7 Jahre als abweichende Volkner-Vorgabe; Webasto nennt hierfür mindestens alle 2 Jahre. Abgasprüfung weiterhin alle 2 Jahre.

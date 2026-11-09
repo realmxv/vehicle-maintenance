@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.4.1",
+  "version": "0.4.2",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -80,17 +80,17 @@
       "id": "webasto-ttp50-kontrolle",
       "category": "heizung",
       "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
-      "title": "Kontrollarbeiten durch Fachbetrieb",
+      "title": "Fachmännische Wartung fällig",
       "interval": {
-        "months": 24
+        "months": 84
       },
-      "trigger": "Mindestens alle 2 Jahre",
-      "source": "Webasto 9045956A, 05/2025, Seite 21, Kapitel 9.7",
-      "status": "source_checked",
-      "note": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Nur vollständig dokumentierter Prüfumfang zählt.",
+      "trigger": "Alle 7 Jahre",
+      "source": "Volkner-Vorgabe, von Max am 09.11.2026 auf alle 7 Jahre geändert. Abweichung: Webasto 9045956A, Kapitel 9.7, nennt Kontrollarbeiten mindestens alle 2 Jahre.",
+      "status": "policy_approved",
+      "note": "Fehlerspeicher, elektrische Anschlüsse und Leitungen, Kraftstoffleitung, Schläuche sowie Heizungsfunktion prüfen.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Nur vollständig dokumentierter Prüfumfang zählt.",
+        "summary": "Fehlerspeicher, elektrische Anschlüsse und Leitungen, Kraftstoffleitung, Schläuche sowie Heizungsfunktion prüfen.",
         "steps": [],
         "warnings": []
       },
@@ -112,7 +112,8 @@
         ],
         "restartIntervalFrom": "performedAt",
         "requiresServiceRecord": true
-      }
+      },
+      "policyBasis": "volkner"
     },
     {
       "id": "heizung-klaerung",
