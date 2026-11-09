@@ -287,6 +287,98 @@
               }
             }
           }
+        },
+        "equipmentId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "enum": [
+            "information",
+            "service"
+          ]
+        },
+        "reset": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "allowedBy",
+            "restartIntervalFrom"
+          ],
+          "properties": {
+            "allowedBy": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {
+                "enum": [
+                  "user",
+                  "controller",
+                  "volkner_service_online"
+                ]
+              }
+            },
+            "event": {
+              "type": "string",
+              "minLength": 1
+            },
+            "restartIntervalFrom": {
+              "enum": [
+                "eventTimestamp",
+                "performedAt"
+              ]
+            },
+            "requiresServiceRecord": {
+              "type": "boolean"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "allowedBy": {
+                    "contains": {
+                      "const": "controller"
+                    }
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "event"
+                ],
+                "properties": {
+                  "restartIntervalFrom": {
+                    "const": "eventTimestamp"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "allowedBy": {
+                    "contains": {
+                      "const": "volkner_service_online"
+                    }
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "requiresServiceRecord"
+                ],
+                "properties": {
+                  "requiresServiceRecord": {
+                    "const": true
+                  },
+                  "restartIntervalFrom": {
+                    "const": "performedAt"
+                  }
+                }
+              }
+            }
+          ]
         }
       },
       "allOf": [
@@ -323,6 +415,82 @@
               "interval": {
                 "not": {
                   "type": "null"
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "webasto-ttp50-betrieb"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "equipmentId",
+              "type",
+              "reset"
+            ],
+            "properties": {
+              "equipmentId": {
+                "const": "webasto-thermo-top-pro-50-lin"
+              },
+              "type": {
+                "const": "information"
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "controller"
+                  ],
+                  "event": "normal_heating_operation_confirmed",
+                  "restartIntervalFrom": "eventTimestamp"
+                }
+              },
+              "interval": {
+                "const": {
+                  "days": 28
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "id": {
+                "const": "webasto-ttp50-kontrolle"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "equipmentId",
+              "type",
+              "reset"
+            ],
+            "properties": {
+              "equipmentId": {
+                "const": "webasto-thermo-top-pro-50-lin"
+              },
+              "type": {
+                "const": "service"
+              },
+              "reset": {
+                "const": {
+                  "allowedBy": [
+                    "volkner_service_online"
+                  ],
+                  "restartIntervalFrom": "performedAt",
+                  "requiresServiceRecord": true
+                }
+              },
+              "interval": {
+                "const": {
+                  "months": 24
                 }
               }
             }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.2.0",
+  "version": "0.3.0",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -41,7 +41,7 @@
     {
       "id": "webasto-ttp50-betrieb",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50",
+      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
       "title": "Heizgerät in Betrieb nehmen",
       "interval": {
         "days": 28
@@ -65,7 +65,16 @@
           "page": 7,
           "url": null
         }
-      ]
+      ],
+      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "type": "information",
+      "reset": {
+        "allowedBy": [
+          "controller"
+        ],
+        "event": "normal_heating_operation_confirmed",
+        "restartIntervalFrom": "eventTimestamp"
+      }
     },
     {
       "id": "webasto-ttp50-saison",
@@ -99,7 +108,7 @@
     {
       "id": "webasto-ttp50-kontrolle",
       "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50",
+      "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
       "title": "Kontrollarbeiten durch Fachbetrieb",
       "interval": {
         "months": 24
@@ -123,7 +132,16 @@
           "page": 21,
           "url": null
         }
-      ]
+      ],
+      "equipmentId": "webasto-thermo-top-pro-50-lin",
+      "type": "service",
+      "reset": {
+        "allowedBy": [
+          "volkner_service_online"
+        ],
+        "restartIntervalFrom": "performedAt",
+        "requiresServiceRecord": true
+      }
     },
     {
       "id": "heizung-klaerung",

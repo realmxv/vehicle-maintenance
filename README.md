@@ -62,3 +62,7 @@ Beispiele für `interval`: `{"days":28}`, `{"months":12}`, `{"operatingHours":50
 Bilder unter `assets/images/`, Anleitungen unter `assets/documents/` ablegen, anschließend den relativen Pfad im Eintrag speichern. Externe Links müssen HTTPS verwenden. Bei nicht veröffentlichbaren Herstellerunterlagen können Dokumentnummer, Ausgabe und Seite mit `url: null` hinterlegt werden. Die vorhandenen Webasto-PDFs werden nicht öffentlich hochgeladen.
 
 „Zuletzt gewartet“, Prüfer, Befund und Fahrzeug-/Gerätekennung sind Wartungsnachweise und gehören nicht in diesen allgemeinen Katalog. `updatedAt` ist kein Wartungsdatum. Das Repository und die Vorschau sind öffentlich; nur freigegebene allgemeine Inhalte einstellen.
+
+## Rücksetzberechtigungen
+
+Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Webasto 28-Tage-Information: ausschließlich Steuerung nach bestätigtem Normalbetrieb. Zweijahreswartung: ausschließlich Volkner-Service online mit Nachweis. Details und Implementierungsgrenzen: [Rücksetzregeln](reset-policy.md).
