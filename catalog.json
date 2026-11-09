@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.5.0",
+  "version": "0.6.0",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -452,6 +452,66 @@
         "requiresServiceRecord": true,
         "requiresReplacementRecord": true
       }
+    },
+    {
+      "id": "ladewandler-klaerung",
+      "category": "elektrik",
+      "equipment": "Ladewandler",
+      "equipmentId": "ladewandler",
+      "title": "Ladewandler: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Genaue Geräteausführung intern klären und passende Wartungsunterlagen prüfen. Noch keine Wartungs- oder Austauschfrist freigegeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Wartungsumfang und Rücksetzberechtigung noch gemeinsam festzulegen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
+    },
+    {
+      "id": "aufbaubatterie-klaerung",
+      "category": "elektrik",
+      "equipment": "Aufbaubatterie",
+      "equipmentId": "aufbaubatterie",
+      "title": "Aufbaubatterie: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Genaue Geräteausführung intern klären und passende Wartungsunterlagen prüfen. Noch keine Wartungs- oder Austauschfrist freigegeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Wartungsumfang und Rücksetzberechtigung noch gemeinsam festzulegen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
+    },
+    {
+      "id": "wechselrichter-ladegeraet-klaerung",
+      "category": "elektrik",
+      "equipment": "Wechselrichter / Ladegerät",
+      "equipmentId": "wechselrichter-ladegeraet",
+      "title": "Wechselrichter / Ladegerät: Wartungsumfang festlegen",
+      "interval": null,
+      "trigger": "Intervall noch nicht freigegeben",
+      "source": null,
+      "status": "pending",
+      "note": "Genaue Geräteausführung intern klären und passende Wartungsunterlagen prüfen. Noch keine Wartungs- oder Austauschfrist freigegeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Wartungsumfang und Rücksetzberechtigung noch gemeinsam festzulegen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     }
   ]
 }

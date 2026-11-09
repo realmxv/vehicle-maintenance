@@ -65,7 +65,7 @@ Bilder unter `assets/images/`, Anleitungen unter `assets/documents/` ablegen, an
 
 ## Rücksetzberechtigungen
 
-Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Heizungssystem 28-Tage-Information: ausschließlich Steuerung nach bestätigtem Normalbetrieb. Fachmännische Wartung alle 7 Jahre: ausschließlich Online-Service online mit Nachweis. Details und Implementierungsgrenzen: [Rücksetzregeln](reset-policy.md).
+Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Heizungssystem 28-Tage-Information: ausschließlich Steuerung nach bestätigtem Normalbetrieb. Fachmännische Wartung alle 7 Jahre: ausschließlich Online-Service mit Nachweis. Details und Implementierungsgrenzen: [Rücksetzregeln](reset-policy.md).
 
 ## Verbindliche Servicevorgaben vom 09.11.2026
 
@@ -73,7 +73,7 @@ Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Heizungssystem 28-Tage
 - Heizgerät und komplette Abgasanlage einschließlich Schalldämpfer spätestens nach 180 Monaten ersetzen.
 - Kühlmittel-Umwälzpumpe und Kraftstoff-Dosierpumpe jeweils spätestens nach 84 Monaten ersetzen.
 
-Diese Fristen sind Servicevorgaben, keine behaupteten Hersteller-Austauschfristen. Alle vier Punkte dürfen nur durch Online-Service online mit Nachweis bestätigt werden. Austauschpunkte benötigen zusätzlich einen Austauschnachweis. Erste Frist ab Einbau/Inbetriebnahme, danach ab tatsächlicher Durchführung der jeweiligen Tätigkeit. Eine Prüfung setzt keine Austauschfrist zurück; Pumpentausch setzt keine Frist der übrigen Bauteile zurück. Ein Komplettwechsel darf Pumpenfristen nur dann neu starten, wenn auch die betreffenden Pumpen tatsächlich mit ersetzt und dokumentiert wurden. Fehlendes Einbaudatum bedeutet Klärungsbedarf, niemals Start der Frist am heutigen Tag. Die Abgasprüfung ersetzt keine noch offene Freigabe der zusätzlichen Aluminium-Abgasleitung. Defekte können einen früheren Austausch erfordern.
+Diese Fristen sind Servicevorgaben, keine behaupteten Hersteller-Austauschfristen. Alle vier Punkte dürfen nur durch Online-Service mit Nachweis bestätigt werden. Austauschpunkte benötigen zusätzlich einen Austauschnachweis. Erste Frist ab Einbau/Inbetriebnahme, danach ab tatsächlicher Durchführung der jeweiligen Tätigkeit. Eine Prüfung setzt keine Austauschfrist zurück; Pumpentausch setzt keine Frist der übrigen Bauteile zurück. Ein Komplettwechsel darf Pumpenfristen nur dann neu starten, wenn auch die betreffenden Pumpen tatsächlich mit ersetzt und dokumentiert wurden. Fehlendes Einbaudatum bedeutet Klärungsbedarf, niemals Start der Frist am heutigen Tag. Die Abgasprüfung ersetzt keine noch offene Freigabe der zusätzlichen Aluminium-Abgasleitung. Defekte können einen früheren Austausch erfordern.
 
 Version 0.4.1: Separater Saisonpunkt auf Nutzerwunsch aus dem Servicekatalog entfernt. Quellenunterlagen bleiben unverändert; der Katalog ersetzt nicht sämtliche Herstellerhinweise.
 
@@ -86,3 +86,7 @@ Version 0.4.2: Fachmännische Wartung fällig – Fehlerspeicher, elektrische An
 ## Wasserpumpe
 
 Alle 24 Monate Vordruck im integrierten Druckbehälter prüfen und gegebenenfalls auf 70 % des eingestellten Pumpendrucks einstellen, bei druckloser Wasserseite; einschließlich Sichtkontrolle und Dichtheitsprüfung. Benutzer dürfen diese Wartung nach tatsächlicher Durchführung bestätigen (`user`, neues Intervall ab `performedAt`). Austausch der kompletten Wasserpumpe alle 180 Monate, ausschließlich durch den autorisierten Online-Service (`service_online`) mit Wartungs- und Austauschnachweis. Erste Frist ab Einbau; Wartung verlängert die Austauschfrist nicht. Beide Intervalle sind eigene Servicevorgaben. Intern geprüfte Herstellerunterlagen empfehlen jährliche Vordruckprüfung und nennen in den geprüften Stellen keine feste Austauschfrist. Weitere jährliche Reinigungsarbeiten aus der internen Recherche sind noch nicht gemeinsam als Katalogpunkte festgelegt.
+
+## Servicehistorie ab Version 0.6.0
+
+[Dauerhaftes Protokoll auf der Steuerung und Online-Austausch](service-history.md) beschreiben die verbindlichen Anforderungen. Der Speicherdienst und Online-Austausch sind noch zu implementieren. Ladewandler, Aufbaubatterie und Wechselrichter/Ladegerät sind neutrale offene Katalogpunkte; Gerätezuordnung und Intervalle sind noch nicht freigegeben.
