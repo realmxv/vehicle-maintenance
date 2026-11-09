@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.4.0",
+  "version": "0.4.1",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -77,35 +77,6 @@
       }
     },
     {
-      "id": "webasto-ttp50-saison",
-      "category": "heizung",
-      "equipment": "Webasto Thermo Top Pro 50",
-      "title": "Fachmännische Prüfung zu Beginn der Heizperiode",
-      "interval": {
-        "event": "Beginn der Heizperiode"
-      },
-      "trigger": "Beginn der Heizperiode",
-      "source": "Webasto 9045439A, 03/2025, Seite 7, Kapitel 11",
-      "status": "source_checked",
-      "note": "Saisonbeginn wird vom Nutzer bzw. Service erfasst, kein festes Kalenderdatum.",
-      "updatedAt": "2026-11-09",
-      "instructions": {
-        "summary": "Saisonbeginn wird vom Nutzer bzw. Service erfasst, kein festes Kalenderdatum.",
-        "steps": [],
-        "warnings": []
-      },
-      "images": [],
-      "documents": [
-        {
-          "title": "Bedienungsanweisung Thermo Top Pro 50",
-          "documentNumber": "9045439A",
-          "issueDate": "2025-03",
-          "page": 7,
-          "url": null
-        }
-      ]
-    },
-    {
       "id": "webasto-ttp50-kontrolle",
       "category": "heizung",
       "equipment": "Webasto Thermo Top Pro 50 LIN · 5 kW",
@@ -116,10 +87,10 @@
       "trigger": "Mindestens alle 2 Jahre",
       "source": "Webasto 9045956A, 05/2025, Seite 21, Kapitel 9.7",
       "status": "source_checked",
-      "note": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Saisonprüfung zusätzlich beachten; nur vollständig dokumentierter Umfang zählt.",
+      "note": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Nur vollständig dokumentierter Prüfumfang zählt.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Saisonprüfung zusätzlich beachten; nur vollständig dokumentierter Umfang zählt.",
+        "summary": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Nur vollständig dokumentierter Prüfumfang zählt.",
         "steps": [],
         "warnings": []
       },

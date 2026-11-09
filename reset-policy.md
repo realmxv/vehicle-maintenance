@@ -7,7 +7,7 @@ Stand 09.11.2026. Bestätigte Produktregeln für Thermo Top Pro 50 LIN, 5 kW.
 | Regelmäßiger Heizbetrieb | information | 28 Tage | Nur controller, nach normal_heating_operation_confirmed |
 | Fachmännische Kontrollarbeiten | service | 24 Kalendermonate | Nur volkner_service_online, mit Wartungsnachweis |
 
-`user` bezeichnet die Benutzerbestätigung in UX, `controller` ein bestätigtes Geräteereignis und `volkner_service_online` euren authentifizierten Online-Service. Mehrere erlaubte Rollen sind im allgemeinen Format möglich, für diese zwei Webasto-Punkte ist jeweils ausschließlich die festgelegte Rolle zulässig. Ohne Rücksetzregel ist Rücksetzen standardmäßig gesperrt; insbesondere ist die Saisonprüfung noch nicht zugeordnet.
+`user` bezeichnet die Benutzerbestätigung in UX, `controller` ein bestätigtes Geräteereignis und `volkner_service_online` euren authentifizierten Online-Service. Mehrere erlaubte Rollen sind im allgemeinen Format möglich, für diese zwei Webasto-Punkte ist jeweils ausschließlich die festgelegte Rolle zulässig. Ohne Rücksetzregel ist Rücksetzen standardmäßig gesperrt.
 
 Die bestehenden IDs und Intervallfelder bleiben erhalten. `reset`, `type` und `equipmentId` ergänzen das bisherige Schema. Jede Geräteinstanz benötigt einen eigenen geschützten Zustand; ein Ereignis einer Heizung darf keine andere zurücksetzen.
 

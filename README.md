@@ -8,7 +8,7 @@ Fahrzeugbezogene Wartung für Heizung, Aufbau und sämtliche eingebauten Systeme
 
 ## Bedienung und Daten
 
-Die erste UX-Ansicht zeigt alle acht Bereiche, filterbare Aufgaben und Quellen. Drei belegte Webasto-TTP50-Bausteine dienen als Start. Für weitere Geräte werden keine Intervalle erfunden. Ohne bestätigte Gerätezuordnung zeigt die Ansicht einen Katalog, keinen fahrzeugbezogenen Freigabestatus. Ein Datum lässt sich ausdrücklich als unverbindliche Fälligkeitsvorschau berechnen; es erzeugt keinen Wartungsnachweis.
+Die erste UX-Ansicht zeigt alle acht Bereiche, filterbare Aufgaben und Quellen. Webasto-TTP50-Bausteine bilden den Start. Für weitere Geräte werden keine Intervalle erfunden. Ohne bestätigte Gerätezuordnung zeigt die Ansicht einen Katalog, keinen fahrzeugbezogenen Freigabestatus. Ein Datum lässt sich ausdrücklich als unverbindliche Fälligkeitsvorschau berechnen; es erzeugt keinen Wartungsnachweis.
 
 Zielausbau: Inbetriebnahme und letzte Wartung je Geräteinstanz, Kilometer/Betriebsstunden mit Herkunft und Aktualität, Kalender- und Ereignisauslöser. Je nach Vorgabe löst die zuerst erreichte Grenze aus. Unbekannte oder veraltete Zähler ergeben keine grüne Freigabe. Vier Wochen sind 28 Tage; Monate werden als Kalendermonate mit Begrenzung auf den letzten gültigen Monatstag berechnet.
 
@@ -57,7 +57,7 @@ Im Repository mit `python -m http.server 8080` einen lokalen Server starten und 
 | interval | Genau eine Frist: days, months, operatingHours, distanceKm oder event |
 | source, status | Beleg und Quellenprüfstand; pending bedeutet ungeklärt, interval muss dann null sein |
 
-Beispiele für `interval`: `{"days":28}`, `{"months":12}`, `{"operatingHours":500}`, `{"distanceKm":10000}`, `{"event":"Beginn der Heizperiode"}`. Diese Beispiele sind Datenformate, keine allgemeinen Wartungsempfehlungen. Die UX berechnet bisher nur Tage und Kalendermonate; Stunden, Kilometer und Ereignisse werden angezeigt, benötigen aber echte Zähler bzw. erfasste Ereignisse für die Fälligkeit. Kombinierte Fristen werden in dieser Version nicht akzeptiert, damit keine Teilfrist übersehen wird.
+Beispiele für `interval`: `{"days":28}`, `{"months":12}`, `{"operatingHours":500}`, `{"distanceKm":10000}`, `{"event":"Nach Instandsetzung"}`. Diese Beispiele sind Datenformate, keine allgemeinen Wartungsempfehlungen. Die UX berechnet bisher nur Tage und Kalendermonate; Stunden, Kilometer und Ereignisse werden angezeigt, benötigen aber echte Zähler bzw. erfasste Ereignisse für die Fälligkeit. Kombinierte Fristen werden in dieser Version nicht akzeptiert, damit keine Teilfrist übersehen wird.
 
 Bilder unter `assets/images/`, Anleitungen unter `assets/documents/` ablegen, anschließend den relativen Pfad im Eintrag speichern. Externe Links müssen HTTPS verwenden. Bei nicht veröffentlichbaren Herstellerunterlagen können Dokumentnummer, Ausgabe und Seite mit `url: null` hinterlegt werden. Die vorhandenen Webasto-PDFs werden nicht öffentlich hochgeladen.
 
@@ -74,3 +74,5 @@ Version 0.3.0 ergänzt `type`, `equipmentId` und `reset`. Webasto 28-Tage-Inform
 - Kühlmittel-Umwälzpumpe und Kraftstoff-Dosierpumpe jeweils spätestens nach 84 Monaten ersetzen.
 
 Diese Fristen sind Volkner-Vorgaben, keine behaupteten Webasto-Hersteller-Austauschfristen. Alle vier Punkte dürfen nur durch Volkner-Service online mit Nachweis bestätigt werden. Austauschpunkte benötigen zusätzlich einen Austauschnachweis. Erste Frist ab Einbau/Inbetriebnahme, danach ab tatsächlicher Durchführung der jeweiligen Tätigkeit. Eine Prüfung setzt keine Austauschfrist zurück; Pumpentausch setzt keine Frist der übrigen Bauteile zurück. Ein Komplettwechsel darf Pumpenfristen nur dann neu starten, wenn auch die betreffenden Pumpen tatsächlich mit ersetzt und dokumentiert wurden. Fehlendes Einbaudatum bedeutet Klärungsbedarf, niemals Start der Frist am heutigen Tag. Die Abgasprüfung ersetzt keine noch offene Freigabe der zusätzlichen Aluminium-Abgasleitung. Defekte können einen früheren Austausch erfordern.
+
+Version 0.4.1: Separater Saisonpunkt auf Nutzerwunsch aus dem Volkner-Katalog entfernt. Quellenunterlagen bleiben unverändert; der Katalog ersetzt nicht sämtliche Herstellerhinweise.
