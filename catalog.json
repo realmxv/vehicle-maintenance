@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.6.0",
+  "version": "0.6.1",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -454,39 +454,46 @@
       }
     },
     {
-      "id": "ladewandler-klaerung",
+      "id": "ladewandler-entstauben",
       "category": "elektrik",
       "equipment": "Ladewandler",
       "equipmentId": "ladewandler",
-      "title": "Ladewandler: Wartungsumfang festlegen",
-      "interval": null,
-      "trigger": "Intervall noch nicht freigegeben",
-      "source": null,
-      "status": "pending",
-      "note": "Genaue Geräteausführung intern klären und passende Wartungsunterlagen prüfen. Noch keine Wartungs- oder Austauschfrist freigegeben.",
+      "title": "Ladewandler: entstauben",
+      "interval": {
+        "months": 24
+      },
+      "trigger": "Alle 2 Jahre",
+      "source": "Eigene Servicevorgabe vom 09.11.2026. Kein vollständiger Ersatz gerätespezifischer Herstellerprüfungen.",
+      "status": "policy_approved",
+      "note": "Gerät und zugängliche Lüftungsbereiche fachgerecht entstauben. Keine feste Austauschfrist. Rücksetzberechtigung noch festzulegen; bis dahin gesperrt.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Wartungsumfang und Rücksetzberechtigung noch gemeinsam festzulegen.",
+        "summary": "Gerät und zugängliche Lüftungsbereiche fachgerecht entstauben. Keine feste Austauschfrist. Rücksetzberechtigung noch festzulegen; bis dahin gesperrt.",
         "steps": [],
-        "warnings": []
+        "warnings": [
+          "Vor Reinigung alle Energiequellen nach Geräteanleitung sicher trennen; elektrische Arbeiten nur fachgerecht ausführen."
+        ]
       },
       "images": [],
-      "documents": []
+      "documents": [],
+      "policyBasis": "service_policy",
+      "type": "service",
+      "intervalStart": "componentInstalledAt"
     },
     {
       "id": "aufbaubatterie-klaerung",
       "category": "elektrik",
       "equipment": "Aufbaubatterie",
       "equipmentId": "aufbaubatterie",
-      "title": "Aufbaubatterie: Wartungsumfang festlegen",
+      "title": "Aufbaubatterie: Austauschentscheidung offen",
       "interval": null,
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Genaue Geräteausführung intern klären und passende Wartungsunterlagen prüfen. Noch keine Wartungs- oder Austauschfrist freigegeben.",
+      "note": "Keine regelmäßige Wartung im Servicekatalog gewünscht. Austauschfrist noch nicht festgelegt; keine pauschale Jahresfrist aus Herstellerangaben abgeleitet.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Wartungsumfang und Rücksetzberechtigung noch gemeinsam festzulegen.",
+        "summary": "Keine regelmäßige Wartung im Servicekatalog gewünscht. Austauschfrist noch nicht festgelegt; keine pauschale Jahresfrist aus Herstellerangaben abgeleitet.",
         "steps": [],
         "warnings": []
       },
@@ -494,24 +501,31 @@
       "documents": []
     },
     {
-      "id": "wechselrichter-ladegeraet-klaerung",
+      "id": "wechselrichter-ladegeraet-kontrolle",
       "category": "elektrik",
       "equipment": "Wechselrichter / Ladegerät",
       "equipmentId": "wechselrichter-ladegeraet",
-      "title": "Wechselrichter / Ladegerät: Wartungsumfang festlegen",
-      "interval": null,
-      "trigger": "Intervall noch nicht freigegeben",
-      "source": null,
-      "status": "pending",
-      "note": "Genaue Geräteausführung intern klären und passende Wartungsunterlagen prüfen. Noch keine Wartungs- oder Austauschfrist freigegeben.",
+      "title": "Wechselrichter / Ladegerät: reinigen und Anschlüsse überprüfen",
+      "interval": {
+        "months": 24
+      },
+      "trigger": "Alle 2 Jahre",
+      "source": "Eigene Servicevorgabe vom 09.11.2026: alle 2 Jahre. Die intern geprüfte Herstelleranleitung nennt jährliche Anschlussprüfung; keine Herstellerfreigabe zur Verlängerung.",
+      "status": "policy_approved",
+      "note": "Gerät und zugängliche Lüftungsbereiche reinigen und elektrische Anschlüsse fachgerecht überprüfen. Keine feste Austauschfrist. Rücksetzberechtigung noch festzulegen; bis dahin gesperrt.",
       "updatedAt": "2026-11-09",
       "instructions": {
-        "summary": "Wartungsumfang und Rücksetzberechtigung noch gemeinsam festzulegen.",
+        "summary": "Gerät und zugängliche Lüftungsbereiche reinigen und elektrische Anschlüsse fachgerecht überprüfen. Keine feste Austauschfrist. Rücksetzberechtigung noch festzulegen; bis dahin gesperrt.",
         "steps": [],
-        "warnings": []
+        "warnings": [
+          "Vor Reinigung alle Energiequellen nach Geräteanleitung sicher trennen; elektrische Arbeiten nur fachgerecht ausführen."
+        ]
       },
       "images": [],
-      "documents": []
+      "documents": [],
+      "policyBasis": "service_policy",
+      "type": "service",
+      "intervalStart": "componentInstalledAt"
     }
   ]
 }

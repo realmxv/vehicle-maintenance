@@ -90,3 +90,5 @@ Alle 24 Monate Vordruck im integrierten Druckbehälter prüfen und gegebenenfall
 ## Servicehistorie ab Version 0.6.0
 
 [Dauerhaftes Protokoll auf der Steuerung und Online-Austausch](service-history.md) beschreiben die verbindlichen Anforderungen. Der Speicherdienst und Online-Austausch sind noch zu implementieren. Ladewandler, Aufbaubatterie und Wechselrichter/Ladegerät sind neutrale offene Katalogpunkte; Gerätezuordnung und Intervalle sind noch nicht freigegeben.
+
+Version 0.6.1: Ladewandler alle 24 Monate entstauben; Wechselrichter/Ladegerät alle 24 Monate reinigen und Anschlüsse überprüfen, ohne feste Austauschfrist, als eigene Servicevorgabe. Rücksetzrecht noch offen, bis dahin gesperrt. Keine regelmäßige Wartungsaufgabe für Aufbaubatterien; deren Austauschentscheidung bleibt offen. Bestehende Fristen anderer Systeme werden durch diese Korrektur nicht verändert.
