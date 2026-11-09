@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "updated": "2026-11-09",
   "status": "development",
   "categories": [
@@ -49,18 +49,52 @@
       "trigger": "Alle 4 Wochen",
       "source": "Webasto 9045439A, 03/2025, Seite 7, Kapitel 11",
       "status": "source_checked",
-      "note": "Keine feste Laufdauer in dieser Wartungsstelle. Nur für Thermo Top Pro 50; nicht auf Webasto 9 kW oder andere Heizungen übertragen."
+      "note": "Keine feste Laufdauer in dieser Wartungsstelle. Nur für Thermo Top Pro 50; nicht auf Webasto 9 kW oder andere Heizungen übertragen.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Keine feste Laufdauer in dieser Wartungsstelle. Nur für Thermo Top Pro 50; nicht auf Webasto 9 kW oder andere Heizungen übertragen.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [
+        {
+          "title": "Bedienungsanweisung Thermo Top Pro 50",
+          "documentNumber": "9045439A",
+          "issueDate": "2025-03",
+          "page": 7,
+          "url": null
+        }
+      ]
     },
     {
       "id": "webasto-ttp50-saison",
       "category": "heizung",
       "equipment": "Webasto Thermo Top Pro 50",
       "title": "Fachmännische Prüfung zu Beginn der Heizperiode",
-      "interval": null,
+      "interval": {
+        "event": "Beginn der Heizperiode"
+      },
       "trigger": "Beginn der Heizperiode",
       "source": "Webasto 9045439A, 03/2025, Seite 7, Kapitel 11",
       "status": "source_checked",
-      "note": "Saisonbeginn wird vom Nutzer bzw. Service erfasst, kein festes Kalenderdatum."
+      "note": "Saisonbeginn wird vom Nutzer bzw. Service erfasst, kein festes Kalenderdatum.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Saisonbeginn wird vom Nutzer bzw. Service erfasst, kein festes Kalenderdatum.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [
+        {
+          "title": "Bedienungsanweisung Thermo Top Pro 50",
+          "documentNumber": "9045439A",
+          "issueDate": "2025-03",
+          "page": 7,
+          "url": null
+        }
+      ]
     },
     {
       "id": "webasto-ttp50-kontrolle",
@@ -73,7 +107,23 @@
       "trigger": "Mindestens alle 2 Jahre",
       "source": "Webasto 9045956A, 05/2025, Seite 21, Kapitel 9.7",
       "status": "source_checked",
-      "note": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Saisonprüfung zusätzlich beachten; nur vollständig dokumentierter Umfang zählt."
+      "note": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Saisonprüfung zusätzlich beachten; nur vollständig dokumentierter Umfang zählt.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Fehlerspeicher, Anschlüsse, elektrische Leitungen, Abgas/Brennluft, Kraftstoffleitung, Schläuche und Funktion prüfen. Saisonprüfung zusätzlich beachten; nur vollständig dokumentierter Umfang zählt.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": [
+        {
+          "title": "Werkstatthandbuch Thermo Top Pro 50",
+          "documentNumber": "9045956A",
+          "issueDate": "2025-05",
+          "page": 21,
+          "url": null
+        }
+      ]
     },
     {
       "id": "heizung-klaerung",
@@ -84,7 +134,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "aufbau-klaerung",
@@ -95,7 +153,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "wasser-klaerung",
@@ -106,7 +172,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "elektrik-klaerung",
@@ -117,7 +191,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "klima-klaerung",
@@ -128,7 +210,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "hydraulik-klaerung",
@@ -139,7 +229,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "fahrgestell-klaerung",
@@ -150,7 +248,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     },
     {
       "id": "ausstattung-klaerung",
@@ -161,7 +267,15 @@
       "trigger": "Intervall noch nicht freigegeben",
       "source": null,
       "status": "pending",
-      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben."
+      "note": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+      "updatedAt": "2026-11-09",
+      "instructions": {
+        "summary": "Hersteller, Typ, Einbausituation und passende Anleitung erfassen; Volkner-Empfehlungen getrennt von Herstellervorgaben freigeben.",
+        "steps": [],
+        "warnings": []
+      },
+      "images": [],
+      "documents": []
     }
   ]
 }

@@ -42,3 +42,23 @@ Das Diagramm zeigt den Zielzustand. Der erste Stand ist eine lokale Katalogansic
 ## Vorschau und Prüfung
 
 Im Repository mit `python -m http.server 8080` einen lokalen Server starten und `http://localhost:8080/preview.html` öffnen. Die Vorschau lädt nur den lokalen Katalog. Rechentests: `node test.cjs`. Für den UX-Offline-Build `catalog.json` in eine lokale JavaScript-Zuweisung `window.VolknerMaintenanceCatalog = ...` umwandeln und vor `maintenance.js` einbinden.
+
+## Anleitung, Datum, Bilder und Wartungsintervall pflegen
+
+`catalog.json` ist die zentrale Datenquelle; `schema.json` prüft die Felder. `entry-template.json` als Vorlage verwenden und den ausgefüllten Eintrag in `items` übernehmen. Neue Inhalte lassen sich direkt über GitHub bearbeiten; eine eigene Eingabemaske in UX ist noch nicht enthalten.
+
+| Feld | Inhalt |
+| --- | --- |
+| title, equipment, category | Wartungsaufgabe, konkretes Gerät und Bereich |
+| instructions | Beschreibung, geordnete Arbeitsschritte und Warnhinweise |
+| updatedAt | Änderungsdatum des Eintrags, YYYY-MM-DD |
+| documents | Anleitung/PDF, Dokumentnummer, Ausgabemonat YYYY-MM, Seite und Link |
+| images | Bilddatei/HTTPS-Link, Bildunterschrift, Alternativtext und optional Aufnahmedatum |
+| interval | Genau eine Frist: days, months, operatingHours, distanceKm oder event |
+| source, status | Beleg und Quellenprüfstand; pending bedeutet ungeklärt, interval muss dann null sein |
+
+Beispiele für `interval`: `{"days":28}`, `{"months":12}`, `{"operatingHours":500}`, `{"distanceKm":10000}`, `{"event":"Beginn der Heizperiode"}`. Diese Beispiele sind Datenformate, keine allgemeinen Wartungsempfehlungen. Die UX berechnet bisher nur Tage und Kalendermonate; Stunden, Kilometer und Ereignisse werden angezeigt, benötigen aber echte Zähler bzw. erfasste Ereignisse für die Fälligkeit. Kombinierte Fristen werden in dieser Version nicht akzeptiert, damit keine Teilfrist übersehen wird.
+
+Bilder unter `assets/images/`, Anleitungen unter `assets/documents/` ablegen, anschließend den relativen Pfad im Eintrag speichern. Externe Links müssen HTTPS verwenden. Bei nicht veröffentlichbaren Herstellerunterlagen können Dokumentnummer, Ausgabe und Seite mit `url: null` hinterlegt werden. Die vorhandenen Webasto-PDFs werden nicht öffentlich hochgeladen.
+
+„Zuletzt gewartet“, Prüfer, Befund und Fahrzeug-/Gerätekennung sind Wartungsnachweise und gehören nicht in diesen allgemeinen Katalog. `updatedAt` ist kein Wartungsdatum. Das Repository und die Vorschau sind öffentlich; nur freigegebene allgemeine Inhalte einstellen.
